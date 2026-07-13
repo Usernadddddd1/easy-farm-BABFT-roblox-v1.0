@@ -1,7 +1,6 @@
 local player = game.Players.LocalPlayer
 
 local flySpeed = 750
-local speedMultiplier = 0.5
 
 local function getCharacter()
     local char = player.Character
@@ -20,11 +19,9 @@ end
 local function flyTo(rootPart, targetPos, speed)
     if not rootPart then return end
     
-    local currentSpeed = speed * speedMultiplier
-    
     local startPos = rootPart.Position
     local distance = (targetPos - startPos).Magnitude
-    local duration = distance / currentSpeed
+    local duration = distance / speed
     
     if duration <= 0 then return end
     
@@ -76,27 +73,31 @@ local function setNoClip(char, enabled)
     end
 end
 
-local function startFarm()
+while true do
+  
     local char = getCharacter()
     local humanoid = char:WaitForChild("Humanoid")
     local rootPart = char:WaitForChild("HumanoidRootPart")
     
+    -- step 1
     setGravity(humanoid, false)
     
+    -- step 2 
     setNoClip(char, true)
     teleport(rootPart, Vector3.new(-69.02, 50.31, 644.43))
     task.wait(0.1)
     
+    -- step 3
     flyTo(rootPart, Vector3.new(-41.79, 50.15, 8675.35), flySpeed)
     
+    -- step 4
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
     
+    -- step 5 
     setNoClip(char, false)
     setGravity(humanoid, true)
     
+    -- step 6
     task.wait(15)
-end
-
-while true do
-    startFarm()
+    
 end
