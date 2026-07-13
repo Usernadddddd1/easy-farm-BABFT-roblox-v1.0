@@ -75,28 +75,19 @@ while true do
     setGravity(humanoid, false)
     
     -- step 2
-    teleport(rootPart, Vector3.new(-69.02, 108.31, 644.43))
+    teleport(rootPart, Vector3.new(-69.02, 77.31, 644.43))
     task.wait(0.1)
     
     -- step 3
     flyTo(rootPart, Vector3.new(-41.79, 77.15, 8675.35), flySpeed)
     
     -- step 4
-    setGravity(humanoid, true)
-    
-    -- step 5
-    task.wait(1.5)
-    
-    -- step 6
-    setGravity(humanoid, false)
-    
-    -- step 7
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
     
-    -- step 8
+    -- step 5
     setGravity(humanoid, false)
     
-    -- step 9
+    -- step 6
     task.wait(15)
     
 end
