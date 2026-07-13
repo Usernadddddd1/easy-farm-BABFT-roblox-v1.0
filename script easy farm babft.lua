@@ -84,11 +84,11 @@ while true do
     
     -- step 2 
     setNoClip(char, true)
-    teleport(rootPart, Vector3.new(-69.02, 50.31, 644.43))
+    teleport(rootPart, Vector3.new(-69.02, 75.31, 644.43))
     task.wait(0.1)
     
     -- step 3
-    flyTo(rootPart, Vector3.new(-41.79, 50.15, 8675.35), flySpeed)
+    flyTo(rootPart, Vector3.new(-41.79, 75.15, 8675.35), flySpeed)
     
     -- step 4
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
