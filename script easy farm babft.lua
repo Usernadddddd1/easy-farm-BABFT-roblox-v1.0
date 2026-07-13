@@ -1,5 +1,3 @@
--- script: easy farm BABDT v1.0 by urpyxa
-
 local player = game.Players.LocalPlayer
 
 local flySpeed = 750
@@ -65,6 +63,16 @@ local function setGravity(humanoid, on)
     end
 end
 
+local function setNoClip(char, enabled)
+    if not char then return end
+    
+    for _, part in pairs(char:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = not enabled
+        end
+    end
+end
+
 while true do
   
     local char = getCharacter()
@@ -75,6 +83,7 @@ while true do
     setGravity(humanoid, false)
     
     -- step 2
+    setNoClip(char, true)
     teleport(rootPart, Vector3.new(-69.02, 50.31, 644.43))
     task.wait(0.1)
     
@@ -85,6 +94,7 @@ while true do
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
     
     -- step 5
+    setNoClip(char, false)
     setGravity(humanoid, true)
     
     -- step 6
