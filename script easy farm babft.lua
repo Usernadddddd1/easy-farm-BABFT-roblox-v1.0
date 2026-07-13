@@ -2,7 +2,7 @@
 
 local player = game.Players.LocalPlayer
 
-local flySpeed = 500 
+local flySpeed = 750
 
 local function getCharacter()
     local char = player.Character
@@ -75,17 +75,17 @@ while true do
     setGravity(humanoid, false)
     
     -- step 2
-    teleport(rootPart, Vector3.new(-69.02, 77.31, 644.43))
+    teleport(rootPart, Vector3.new(-69.02, 50.31, 644.43))
     task.wait(0.1)
     
     -- step 3
-    flyTo(rootPart, Vector3.new(-41.79, 77.15, 8675.35), flySpeed)
+    flyTo(rootPart, Vector3.new(-41.79, 50.15, 8675.35), flySpeed)
     
     -- step 4
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
     
     -- step 5
-    setGravity(humanoid, false)
+    setGravity(humanoid, true)
     
     -- step 6
     task.wait(15)
