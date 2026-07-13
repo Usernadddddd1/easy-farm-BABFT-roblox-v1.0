@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 
 local flySpeed = 750
-local speedMultiplier = 1.5
+local speedMultiplier = 0.5
 
 local function getCharacter()
     local char = player.Character
