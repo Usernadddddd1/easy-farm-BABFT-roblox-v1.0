@@ -94,8 +94,7 @@ while true do
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
     
     -- step 5 
-    setNoClip(char, false)
-    setGravity(humanoid, true)
+    setNoClip(char, true)
     
     -- step 6
     task.wait(18)
