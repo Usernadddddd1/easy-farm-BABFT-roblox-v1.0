@@ -84,11 +84,11 @@ while true do
     
     -- step 2 
     setNoClip(char, true)
-    flyTo(rootPart, Vector3.new(-69.02, 90.31, 644.43), flySpeed)
+    flyTo(rootPart, Vector3.new(-69.02, 120.31, 644.43), flySpeed)
     task.wait(0.0)
     
     -- step 3
-    flyTo(rootPart, Vector3.new(-41.79, 110.15, 8675.35), flySpeed)
+    flyTo(rootPart, Vector3.new(-41.79, 130.15, 8675.35), flySpeed)
     
     -- step 4
     flyTo(rootPart, Vector3.new(-55.88, -361.12, 9488.14), flySpeed)
