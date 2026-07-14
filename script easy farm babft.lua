@@ -95,7 +95,6 @@ while true do
     
     -- step 5 
     setNoClip(char, false)
-    setGravity(humanoid, true)
     
     -- step 6
     task.wait(18)
